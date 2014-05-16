@@ -1,0 +1,29 @@
+version: v1beta1
+volumes:
+  - name: vol1
+  - name: vol2
+containers:
+  - name: container1
+    image: foo/bar
+    command:
+      - "/bin/echo"
+      - "'12345' '6789'"
+    volumeMounts:
+      - name: vol1
+        readOnly: true
+        path: /mnt/vol1
+      - name: vol2
+        readOnly: false
+        path: /mnt/vol2
+    ports:
+      - name: port80
+        hostPort: 80
+        containerPort: 80
+      - name: port81
+        hostPort: 81
+        containerPort: 81
+    env:
+      - key: VAR1
+        value: "value"
+      - key: VAR2
+        value: "value"
