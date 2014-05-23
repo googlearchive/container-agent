@@ -21,14 +21,16 @@ Container-optimized images including `container-agent` are available for Google 
 
 You can list available versions using:
 ```
-gcutil --project=google-containers listimages
+gcloud compute images list --project google-containers
 ```
 
 You can launch a new instance running `container-agent`. It will try to read the [manifest](#manifest) from `google-container-manifest` metadata on startup:
 ```
-gcutil addinstance my-container-vm \
-    --image=projects/google-containers/global/images/container-vm-v20140522 \
-    --metadata_from_file=google-container-manifest:containers.yaml
+gcloud compute instances create my-container-vm \
+    --image projects/google-containers/global/images/container-vm-v20140522 \
+    --metadata-from-file google-container-manifest=/path/to/containers.yaml \
+    --zone us-central1-a \
+    --machine-type f1-micro
 ```
 
 [Read more about Containers on the Google Cloud Platform](https://developers.google.com/compute/docs/containers)
@@ -51,7 +53,7 @@ A simple netcat server.
 version: v1beta1
 containers:
   - name: simple-echo
-    image: google/busybox
+    image: busybox
     command: ['nc', '-p', '8080', '-l', '-l', '-e', 'echo', 'hello world!']
     ports:
       - name: nc-echo
