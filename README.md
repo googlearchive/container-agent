@@ -3,6 +3,8 @@ container-agent
 
 container-agent is a small python agent designed to manage a [group](#container-group) of [Docker](https://docker.io) containers according to a YAML [manifest](#manifest).
 
+[![Build Status](https://travis-ci.org/GoogleCloudPlatform/container-agent.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/container-agent)
+
 ## Usage
 
 ### Locally
