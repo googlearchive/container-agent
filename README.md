@@ -11,7 +11,7 @@ container-agent is a small python agent designed to manage a [group](#container-
 
 ```
 virtualenv env
-env/bin/pip install git+http://github.com/GoogleCloudPlatform/container-vm-agent.git
+env/bin/pip install git+http://github.com/GoogleCloudPlatform/container-agent.git
 env/bin/container-agent <path/to/manifest.yaml>
 ```
 
