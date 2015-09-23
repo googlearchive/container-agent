@@ -1,7 +1,11 @@
+![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
+
+This project is no longer actively developed or maintained.  
+
+This code is deprecated in favor of [Kubernetes](https://github.com/GoogleCloudPlatform/kubernetes) and [Kubelet](https://github.com/GoogleCloudPlatform/kubernetes/tree/master/pkg/kubelet).
+
 container-agent
 ===============
-
-PLEASE NOTE: This code is deprecated in favor of [Kubernetes](https://github.com/GoogleCloudPlatform/kubernetes) and [Kubelet](https://github.com/GoogleCloudPlatform/kubernetes/tree/master/pkg/kubelet).
 
 container-agent is a small python agent designed to manage a [group](#container-group) of [Docker](https://docker.io) containers according to a YAML [manifest](#manifest).
 
